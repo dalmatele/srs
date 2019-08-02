@@ -426,6 +426,7 @@ int SrsProtocol::decode_message(SrsCommonMessage* msg, SrsPacket** ppacket)
     SrsPacket* packet = NULL;
     if ((ret = do_decode_message(msg->header, &stream, &packet)) != ERROR_SUCCESS) {
         srs_freep(packet);
+        srs_trace("package ret = %d", ret);
         return ret;
     }
     
