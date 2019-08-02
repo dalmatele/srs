@@ -48,7 +48,6 @@ using namespace std;
 #include <srs_kernel_file.hpp>
 #include <srs_lib_bandwidth.hpp>
 #include <srs_raw_avc.hpp>
-#include <unistd.h>
 
 // kernel module.
 ISrsLog* _srs_log = new ISrsLog();
@@ -824,7 +823,6 @@ int srs_rtmp_publish_stream(srs_rtmp_t rtmp)
     
     srs_assert(rtmp != NULL);
     Context* context = (Context*)rtmp;
-    usleep(10);
     if ((ret = context->rtmp->fmle_publish(context->stream, context->stream_id)) != ERROR_SUCCESS) {
         return ret;
     }
