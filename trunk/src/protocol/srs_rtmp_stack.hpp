@@ -418,9 +418,11 @@ public:
                 return ret;
             }
             srs_trace("decode message success.");
-            T* pkt = dynamic_cast<T*>(packet);
-            srs_trace("dynamic cast.");
+            T* pkt = dynamic_cast<T*>(packet);            
             if (!pkt) {
+                srs_trace("drop message(type=%d, size=%d, time=%"PRId64", sid=%d).", 
+                    msg->header.message_type, msg->header.payload_length,
+                    msg->header.timestamp, msg->header.stream_id);
                 srs_info("drop message(type=%d, size=%d, time=%"PRId64", sid=%d).", 
                     msg->header.message_type, msg->header.payload_length,
                     msg->header.timestamp, msg->header.stream_id);
