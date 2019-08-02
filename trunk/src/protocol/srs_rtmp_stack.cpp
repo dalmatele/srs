@@ -2949,6 +2949,7 @@ int SrsRtmpServer::start_fmle_publish(int stream_id)
             return ret;
         }
         srs_info("recv publish request message success.");
+        srs_trace("recv publish request message success.");
         
         SrsAutoFree(SrsCommonMessage, msg);
         SrsAutoFree(SrsPublishPacket, pkt);
@@ -2966,6 +2967,7 @@ int SrsRtmpServer::start_fmle_publish(int stream_id)
             return ret;
         }
         srs_info("send onFCPublish(NetStream.Publish.Start) message success.");
+        srs_trace("send onFCPublish(NetStream.Publish.Start) message success.");
     }
     // publish response onStatus(NetStream.Publish.Start)
     if (true) {
@@ -2981,6 +2983,7 @@ int SrsRtmpServer::start_fmle_publish(int stream_id)
             return ret;
         }
         srs_info("send onStatus(NetStream.Publish.Start) message success.");
+        srs_trace("send onStatus(NetStream.Publish.Start) message success.");
     }
     
     srs_info("FMLE publish success.");
