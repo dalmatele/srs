@@ -417,7 +417,7 @@ public:
                 srs_freep(packet);
                 return ret;
             }
-            
+            srs_trace("decode message success.");
             T* pkt = dynamic_cast<T*>(packet);
             if (!pkt) {
                 srs_info("drop message(type=%d, size=%d, time=%"PRId64", sid=%d).", 
@@ -427,7 +427,7 @@ public:
                 srs_freep(packet);
                 continue;
             }
-            
+            srs_trace("end recv message success.");
             *pmsg = msg;
             *ppacket = pkt;
             break;
