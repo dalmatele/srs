@@ -431,7 +431,7 @@ int SrsProtocol::decode_message(SrsCommonMessage* msg, SrsPacket** ppacket)
     
     // set to output ppacket only when success.
     *ppacket = packet;
-    
+    srs_trace("package ret = %d", ret);
     return ret;
 }
 
@@ -2903,6 +2903,7 @@ int SrsRtmpServer::start_fmle_publish(int stream_id)
         fc_publish_tid = pkt->transaction_id;
     }
     // FCPublish response
+    srs_trace("SrsFMLEStartResPacket");
     if (true) {
         SrsFMLEStartResPacket* pkt = new SrsFMLEStartResPacket(fc_publish_tid);
         if ((ret = protocol->send_and_free_packet(pkt, 0)) != ERROR_SUCCESS) {

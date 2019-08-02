@@ -429,8 +429,7 @@ public:
                 srs_trace("free msg");
                 srs_freep(packet);
                 srs_trace("free packet");
-                // continue;
-                break;
+                // continue;                
             }
             srs_trace("end recv message success.");
             *pmsg = msg;
