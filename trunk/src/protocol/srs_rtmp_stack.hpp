@@ -427,7 +427,9 @@ public:
                     msg->header.message_type, msg->header.payload_length,
                     msg->header.timestamp, msg->header.stream_id);
                 srs_freep(msg);
+                srs_trace("free msg");
                 srs_freep(packet);
+                srs_trace("free packet");
                 continue;
             }
             srs_trace("end recv message success.");
