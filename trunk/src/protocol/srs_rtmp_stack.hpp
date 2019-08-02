@@ -407,6 +407,7 @@ public:
                 }
                 return ret;
             }
+            srs_trace("recv message success.");
             srs_verbose("recv message success.");
             
             SrsPacket* packet = NULL;
