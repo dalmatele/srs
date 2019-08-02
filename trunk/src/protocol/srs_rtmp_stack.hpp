@@ -438,6 +438,9 @@ public:
             srs_trace("message(type=%d, size=%d, time=%"PRId64", sid=%d).", 
                     msg->header.message_type, msg->header.payload_length,
                     msg->header.timestamp, msg->header.stream_id);
+            std::string res;
+            msg->body_read_all(res);
+            srs_trace(res);
             break;
         }
         srs_trace("ducla %d", ret);
