@@ -2889,6 +2889,7 @@ int SrsRtmpServer::start_fmle_publish(int stream_id)
     if (true) {
         SrsCommonMessage* msg = NULL;
         SrsFMLEStartPacket* pkt = NULL;
+        srs_trace("expect message");
         if ((ret = expect_message<SrsFMLEStartPacket>(&msg, &pkt)) != ERROR_SUCCESS) {
             srs_error("recv FCPublish message failed. ret=%d", ret);
             srs_trace("recv FCPublish message failed. ret=%d", ret);
