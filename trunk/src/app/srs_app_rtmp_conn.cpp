@@ -837,15 +837,16 @@ int SrsRtmpConn::publishing(SrsSource* source)
 
     if ((ret = refer->check(req->pageUrl, _srs_config->get_refer_publish(req->vhost))) != ERROR_SUCCESS) {
         srs_error("check publish_refer failed. ret=%d", ret);
+        srs_trace("check publish_refer failed. ret=%d", ret);
         return ret;
     }
     srs_verbose("check publish_refer success.");
-
+    srs_trace("check publish_refer success.");
     if ((ret = http_hooks_on_publish()) != ERROR_SUCCESS) {
         srs_error("http hook on_publish failed. ret=%d", ret);
         return ret;
     }
-
+    srs_trace("acquire_publish");
     bool vhost_is_edge = _srs_config->get_vhost_is_edge(req->vhost);
     if ((ret = acquire_publish(source, vhost_is_edge)) == ERROR_SUCCESS) {
         // use isolate thread to recv,
@@ -870,7 +871,7 @@ int SrsRtmpConn::publishing(SrsSource* source)
     if (ret != ERROR_SYSTEM_STREAM_BUSY) {
         release_publish(source, vhost_is_edge);
     }
-
+    srs_trace("hook on unpublish");
     http_hooks_on_unpublish();
 
     return ret;
