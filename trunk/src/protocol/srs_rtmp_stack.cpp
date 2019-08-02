@@ -2889,6 +2889,7 @@ int SrsRtmpServer::start_fmle_publish(int stream_id)
     if (true) {
         SrsCommonMessage* msg = NULL;
         SrsFMLEStartPacket* pkt = NULL;
+        srs_trace("expect_message 1");
         if ((ret = expect_message<SrsFMLEStartPacket>(&msg, &pkt)) != ERROR_SUCCESS) {
             srs_error("recv FCPublish message failed. ret=%d", ret);
             srs_trace("recv FCPublish message failed. ret=%d", ret);
@@ -2916,6 +2917,7 @@ int SrsRtmpServer::start_fmle_publish(int stream_id)
     if (true) {
         SrsCommonMessage* msg = NULL;
         SrsCreateStreamPacket* pkt = NULL;
+        srs_trace("expect_message 2");
         if ((ret = expect_message<SrsCreateStreamPacket>(&msg, &pkt)) != ERROR_SUCCESS) {
             srs_error("recv createStream message failed. ret=%d", ret);
             return ret;
@@ -2941,6 +2943,7 @@ int SrsRtmpServer::start_fmle_publish(int stream_id)
     if (true) {
         SrsCommonMessage* msg = NULL;
         SrsPublishPacket* pkt = NULL;
+        srs_trace("expect_message 3");
         if ((ret = expect_message<SrsPublishPacket>(&msg, &pkt)) != ERROR_SUCCESS) {
             srs_error("recv publish message failed. ret=%d", ret);
             return ret;
