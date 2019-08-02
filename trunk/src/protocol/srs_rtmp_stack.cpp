@@ -418,6 +418,7 @@ int SrsProtocol::decode_message(SrsCommonMessage* msg, SrsPacket** ppacket)
     // it's ok for the initialize if fast and without memory copy.
     if ((ret = stream.initialize(msg->payload, msg->size)) != ERROR_SUCCESS) {
         srs_error("initialize stream failed. ret=%d", ret);
+        srs_trace("package 1 ret = %d", ret);
         return ret;
     }
     srs_verbose("decode stream initialized success");
@@ -426,13 +427,13 @@ int SrsProtocol::decode_message(SrsCommonMessage* msg, SrsPacket** ppacket)
     SrsPacket* packet = NULL;
     if ((ret = do_decode_message(msg->header, &stream, &packet)) != ERROR_SUCCESS) {
         srs_freep(packet);
-        srs_trace("package ret = %d", ret);
+        srs_trace("package 2 ret = %d", ret);
         return ret;
     }
     
     // set to output ppacket only when success.
     *ppacket = packet;
-    srs_trace("package ret = %d", ret);
+    srs_trace("package 3 ret = %d", ret);
     return ret;
 }
 
