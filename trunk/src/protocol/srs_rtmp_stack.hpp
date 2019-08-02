@@ -398,7 +398,6 @@ public:
         *ppacket = NULL;
         
         int ret = ERROR_SUCCESS;
-        srs_trace("expect message");
         while (true) {
             SrsCommonMessage* msg = NULL;
             if ((ret = recv_message(&msg)) != ERROR_SUCCESS) {
@@ -430,7 +429,8 @@ public:
                 srs_trace("free msg");
                 srs_freep(packet);
                 srs_trace("free packet");
-                continue;
+                // continue;
+                break;
             }
             srs_trace("end recv message success.");
             *pmsg = msg;
