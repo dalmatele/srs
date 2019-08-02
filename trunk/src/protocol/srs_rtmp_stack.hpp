@@ -435,6 +435,9 @@ public:
             srs_trace("end recv message success.");
             *pmsg = msg;
             *ppacket = pkt;
+            srs_trace("message(type=%d, size=%d, time=%"PRId64", sid=%d).", 
+                    msg->header.message_type, msg->header.payload_length,
+                    msg->header.timestamp, msg->header.stream_id);
             break;
         }
         srs_trace("ducla %d", ret);
