@@ -35,6 +35,91 @@ and session based log, linux service script and install script.
 1. MIT license, open source with product management and evolution.
 
 Enjoy it!
+## How to Build
+###How to build with FFMPEG
+**Pre-step:** We need to install these library:
+
+* [nasm](https://techouse.co.in/how-to-install-nasm-latest-version-in-linux/techouse/)
+*  ```yum install pkgconfig```
+*  ```yum install speex-devel```
+*  ```yum install bzip2-devel```
+*  
+
+**Step 1:** Get SRS:
+
+```
+git clone https://github.com/dalmatele/srs
+cd srs/trunk
+```
+
+Or update the exist code:
+
+```
+git pull
+```
+
+**Step 2:** Build SRS
+
+```
+./configure --with-ffmpeg && make
+```
+
+**Step 3:** Config file, for detail read [FFMPEG](https://github.com/ossrs/srs/wiki/v2_EN_FFMPEG)
+
+Save the below as config file, or use ```conf/ffmpeg.transcode.conf``` instead:
+
+```
+# conf/ffmpeg.transcode.conf
+listen              1935;
+max_connections     1000;
+vhost __defaultVhost__ {
+    transcode {
+        enabled     on;
+        ffmpeg      ./objs/ffmpeg/bin/ffmpeg;
+        engine ff {
+            enabled         on;
+            vfilter {
+            }
+            vcodec          libx264;
+            vbitrate        500;
+            vfps            25;
+            vwidth          768;
+            vheight         320;
+            vthreads        12;
+            vprofile        main;
+            vpreset         medium;
+            vparams {
+            }
+            acodec          libfdk_aac;
+            abitrate        70;
+            asample_rate    44100;
+            achannels       2;
+            aparams {
+            }
+            output          rtmp://127.0.0.1:[port]/[app]?vhost=[vhost]/[stream]_[engine];
+        }
+    }
+}
+```
+
+**Step 4:** Start SRS, for detail, read [FFMPEG](https://github.com/ossrs/srs/wiki/v2_EN_FFMPEG)
+
+```
+./objs/srs -c conf/ffmpeg.conf
+```
+
+**Step 5:** start encoder, for detail, read [FFMPEG](https://github.com/ossrs/srs/wiki/v2_EN_FFMPEG)
+Use FFMPEG to publish stream:
+```
+for((;;)); do \
+        ./objs/ffmpeg/bin/ffmpeg -re -i ./doc/source.200kbps.768x320.flv \
+        -vcodec copy -acodec copy \
+        -f flv -y rtmp://192.168.1.170/live/livestream; \
+        sleep 1; \
+    done
+```
+    
+
 
 ## About
 

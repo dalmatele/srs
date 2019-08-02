@@ -391,7 +391,7 @@ int run_master()
         return ret;
     }
     
-    if ((ret = _srs_server->acquire_pid_file()) != ERROR_SUCCESS) {
+    if ((ret = _srs_server->acquire_pid_file()) != ERROR_SUCCESS) {        
         return ret;
     }
     

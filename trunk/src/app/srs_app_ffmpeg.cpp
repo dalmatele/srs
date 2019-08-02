@@ -120,7 +120,7 @@ int SrsFFMPEG::initialize_transcode(SrsConfDirective* engine)
     achannels           = _srs_config->get_engine_achannels(engine);
     aparams             = _srs_config->get_engine_aparams(engine);
     oformat             = _srs_config->get_engine_oformat(engine);
-    
+    srs_info("ducla");
     // ensure the size is even.
     vwidth -= vwidth % 2;
     vheight -= vheight % 2;

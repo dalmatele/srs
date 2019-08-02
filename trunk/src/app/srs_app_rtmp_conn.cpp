@@ -519,6 +519,7 @@ int SrsRtmpConn::stream_service_cycle()
     source->set_cache(enabled_cache);
     
     client_type = type;
+    srs_trace("client_type: %d", type);
     switch (type) {
         case SrsRtmpConnPlay: {
             srs_verbose("start to play stream %s.", req->stream.c_str());
