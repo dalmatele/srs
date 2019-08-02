@@ -541,7 +541,8 @@ int SrsRtmpConn::stream_service_cycle()
             return ret;
         }
         case SrsRtmpConnFMLEPublish: {
-            srs_verbose("FMLE start to publish stream %s.", req->stream.c_str());            
+            srs_verbose("FMLE start to publish stream %s.", req->stream.c_str());
+            srs_trace("start fmle publish");            
             if ((ret = rtmp->start_fmle_publish(res->stream_id)) != ERROR_SUCCESS) {
                 srs_error("start to publish stream failed. ret=%d", ret);
                 return ret;
