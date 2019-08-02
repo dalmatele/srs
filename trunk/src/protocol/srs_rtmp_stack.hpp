@@ -398,7 +398,7 @@ public:
         *ppacket = NULL;
         
         int ret = ERROR_SUCCESS;
-        
+        srs_trace("expect message");
         while (true) {
             SrsCommonMessage* msg = NULL;
             if ((ret = recv_message(&msg)) != ERROR_SUCCESS) {
