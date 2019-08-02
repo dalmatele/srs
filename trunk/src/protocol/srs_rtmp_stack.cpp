@@ -2981,7 +2981,7 @@ int SrsRtmpServer::start_fmle_publish(int stream_id)
     }
     
     srs_info("FMLE publish success.");
-    
+    srs_trace("response: %d", ret);
     return ret;
 }
 
