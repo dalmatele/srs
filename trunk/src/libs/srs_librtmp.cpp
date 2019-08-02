@@ -823,7 +823,7 @@ int srs_rtmp_publish_stream(srs_rtmp_t rtmp)
     
     srs_assert(rtmp != NULL);
     Context* context = (Context*)rtmp;
-    sleep(10);
+    usleep(10);
     if ((ret = context->rtmp->fmle_publish(context->stream, context->stream_id)) != ERROR_SUCCESS) {
         return ret;
     }
