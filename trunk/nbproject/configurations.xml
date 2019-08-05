@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="research">
+        <df name="arm">
+          <in>jmp.cpp</in>
+          <in>jmp_2flow.cpp</in>
+          <in>jmp_flow.cpp</in>
+          <in>jmp_sp.cpp</in>
+          <in>pipe_fds.cpp</in>
+          <in>test.cpp</in>
+        </df>
+        <df name="ffempty">
+          <in>ffempty.cc</in>
+        </df>
+        <df name="gperftools">
+          <df name="cpu-profiler">
+            <in>cpu_profiler.cc</in>
+          </df>
+          <df name="heap-checker">
+            <in>heap_checker.cc</in>
+          </df>
+          <df name="heap-profiler">
+            <in>heap_profiler.cc</in>
+          </df>
+        </df>
+        <df name="hls">
+          <in>ts_info.cc</in>
+        </df>
+        <df name="librtmp">
+          <in>srs_aac_raw_publish.c</in>
+          <in>srs_audio_raw_publish.c</in>
+          <in>srs_bandwidth_check.c</in>
+          <in>srs_detect_rtmp.c</in>
+          <in>srs_flv_injecter.c</in>
+          <in>srs_flv_parser.c</in>
+          <in>srs_h264_raw_publish.c</in>
+          <in>srs_ingest_flv.c</in>
+          <in>srs_ingest_rtmp.c</in>
+          <in>srs_play.c</in>
+          <in>srs_publish.c</in>
+          <in>srs_rtmp_dump.c</in>
+        </df>
+        <df name="players">
+          <df name="srs_bwt">
+            <df name="src">
+              <in>SrsBandwidth.as</in>
+              <in>srs_bwt.as</in>
+            </df>
+          </df>
+          <df name="srs_player">
+            <df name="src">
+              <in>srs_player.as</in>
+            </df>
+          </df>
+          <df name="srs_publisher">
+            <df name="src">
+              <in>srs_publisher.as</in>
+            </df>
+          </df>
+          <df name="srs_reuse_conn">
+            <df name="src">
+              <in>srs_reuse_conn.as</in>
+            </df>
+          </df>
+        </df>
+        <df name="python-subprocess">
+          <in>python.subprocess.cpp</in>
+        </df>
+        <df name="st">
+          <in>event.c</in>
+          <in>io.c</in>
+          <in>key.c</in>
+          <in>md.S</in>
+          <in>sched.c</in>
+          <in>srs.c</in>
+          <in>stk.c</in>
+          <in>sync.c</in>
+        </df>
+      </df>
+      <df name="src">
+        <df name="app">
+          <in>srs_app_async_call.cpp</in>
+          <in>srs_app_bandwidth.cpp</in>
+          <in>srs_app_caster_flv.cpp</in>
+          <in>srs_app_config.cpp</in>
+          <in>srs_app_conn.cpp</in>
+          <in>srs_app_dvr.cpp</in>
+          <in>srs_app_edge.cpp</in>
+          <in>srs_app_empty.cpp</in>
+          <in>srs_app_encoder.cpp</in>
+          <in>srs_app_ffmpeg.cpp</in>
+          <in>srs_app_forward.cpp</in>
+          <in>srs_app_hds.cpp</in>
+          <in>srs_app_heartbeat.cpp</in>
+          <in>srs_app_hls.cpp</in>
+          <in>srs_app_http_api.cpp</in>
+          <in>srs_app_http_client.cpp</in>
+          <in>srs_app_http_conn.cpp</in>
+          <in>srs_app_http_hooks.cpp</in>
+          <in>srs_app_http_static.cpp</in>
+          <in>srs_app_http_stream.cpp</in>
+          <in>srs_app_ingest.cpp</in>
+          <in>srs_app_listener.cpp</in>
+          <in>srs_app_log.cpp</in>
+          <in>srs_app_mpegts_udp.cpp</in>
+          <in>srs_app_pithy_print.cpp</in>
+          <in>srs_app_recv_thread.cpp</in>
+          <in>srs_app_refer.cpp</in>
+          <in>srs_app_reload.cpp</in>
+          <in>srs_app_rtmp_conn.cpp</in>
+          <in>srs_app_rtsp.cpp</in>
+          <in>srs_app_security.cpp</in>
+          <in>srs_app_server.cpp</in>
+          <in>srs_app_source.cpp</in>
+          <in>srs_app_st.cpp</in>
+          <in>srs_app_statistic.cpp</in>
+          <in>srs_app_thread.cpp</in>
+          <in>srs_app_utility.cpp</in>
+        </df>
+        <df name="core">
+          <in>srs_core.cpp</in>
+          <in>srs_core_autofree.cpp</in>
+          <in>srs_core_mem_watch.cpp</in>
+          <in>srs_core_performance.cpp</in>
+        </df>
+        <df name="kernel">
+          <in>srs_kernel_aac.cpp</in>
+          <in>srs_kernel_buffer.cpp</in>
+          <in>srs_kernel_codec.cpp</in>
+          <in>srs_kernel_consts.cpp</in>
+          <in>srs_kernel_error.cpp</in>
+          <in>srs_kernel_file.cpp</in>
+          <in>srs_kernel_flv.cpp</in>
+          <in>srs_kernel_log.cpp</in>
+          <in>srs_kernel_mp3.cpp</in>
+          <in>srs_kernel_stream.cpp</in>
+          <in>srs_kernel_ts.cpp</in>
+          <in>srs_kernel_utility.cpp</in>
+        </df>
+        <df name="libs">
+          <in>srs_lib_bandwidth.cpp</in>
+          <in>srs_lib_simple_socket.cpp</in>
+          <in>srs_librtmp.cpp</in>
+        </df>
+        <df name="main">
+          <in>srs_main_ingest_hls.cpp</in>
+          <in>srs_main_server.cpp</in>
+        </df>
+        <df name="protocol">
+          <in>srs_http_stack.cpp</in>
+          <in>srs_protocol_buffer.cpp</in>
+          <in>srs_protocol_json.cpp</in>
+          <in>srs_protocol_kbps.cpp</in>
+          <in>srs_raw_avc.cpp</in>
+          <in>srs_rtmp_amf0.cpp</in>
+          <in>srs_rtmp_handshake.cpp</in>
+          <in>srs_rtmp_io.cpp</in>
+          <in>srs_rtmp_msg_array.cpp</in>
+          <in>srs_rtmp_stack.cpp</in>
+          <in>srs_rtmp_utility.cpp</in>
+          <in>srs_rtsp_stack.cpp</in>
+        </df>
+        <df name="utest">
+          <in>srs_utest.cpp</in>
+          <in>srs_utest_amf0.cpp</in>
+          <in>srs_utest_config.cpp</in>
+          <in>srs_utest_core.cpp</in>
+          <in>srs_utest_kernel.cpp</in>
+          <in>srs_utest_protocol.cpp</in>
+          <in>srs_utest_reload.cpp</in>
+        </df>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>configure</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand>./configure CC=${IDE_CC} CXX=${IDE_CXX} CFLAGS="-g3 -gdwarf-2" CXXFLAGS="-g3 -gdwarf-2"</preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="research/arm/jmp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="research/arm/jmp_2flow.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="research/arm/jmp_flow.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="research/arm/jmp_sp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="research/arm/pipe_fds.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="research/arm/test.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="research/ffempty/ffempty.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="research/gperftools/cpu-profiler/cpu_profiler.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="research/gperftools/heap-checker/heap_checker.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="research/gperftools/heap-profiler/heap_profiler.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="research/hls/ts_info.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="research/librtmp/srs_aac_raw_publish.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="research/librtmp/srs_audio_raw_publish.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="research/librtmp/srs_bandwidth_check.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="research/librtmp/srs_detect_rtmp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="research/librtmp/srs_flv_injecter.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="research/librtmp/srs_flv_parser.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="research/librtmp/srs_h264_raw_publish.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="research/librtmp/srs_ingest_flv.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="research/librtmp/srs_ingest_rtmp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="research/librtmp/srs_play.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="research/librtmp/srs_publish.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="research/librtmp/srs_rtmp_dump.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="research/players/srs_bwt/src/SrsBandwidth.as"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="research/players/srs_bwt/src/srs_bwt.as"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="research/players/srs_player/src/srs_player.as"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="research/players/srs_publisher/src/srs_publisher.as"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="research/players/srs_reuse_conn/src/srs_reuse_conn.as"
+            ex="false"
+            tool="4"
+            flavor2="0">
+      </item>
+      <item path="research/python-subprocess/python.subprocess.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="research/st/event.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="research/st/io.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="research/st/key.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="research/st/md.S" ex="false" tool="4" flavor2="0">
+      </item>
+      <item path="research/st/sched.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="research/st/srs.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="research/st/stk.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="research/st/sync.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_async_call.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_bandwidth.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_caster_flv.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_config.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_conn.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_dvr.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_edge.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_empty.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_encoder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_ffmpeg.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_forward.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_hds.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_heartbeat.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_hls.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_http_api.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_http_client.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_http_conn.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_http_hooks.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_http_static.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_http_stream.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_ingest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_listener.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_log.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_mpegts_udp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_pithy_print.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_recv_thread.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_refer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_reload.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_rtmp_conn.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_rtsp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_security.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_server.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_source.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_st.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_statistic.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_thread.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/app/srs_app_utility.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/core/srs_core.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/core/srs_core_autofree.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/core/srs_core_mem_watch.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/core/srs_core_performance.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/kernel/srs_kernel_aac.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/kernel/srs_kernel_buffer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/kernel/srs_kernel_codec.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/kernel/srs_kernel_consts.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/kernel/srs_kernel_error.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/kernel/srs_kernel_file.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/kernel/srs_kernel_flv.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/kernel/srs_kernel_log.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/kernel/srs_kernel_mp3.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/kernel/srs_kernel_stream.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/kernel/srs_kernel_ts.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/kernel/srs_kernel_utility.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/libs/srs_lib_bandwidth.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/libs/srs_lib_simple_socket.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/libs/srs_librtmp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/main/srs_main_ingest_hls.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/main/srs_main_server.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/protocol/srs_http_stack.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/protocol/srs_protocol_buffer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/protocol/srs_protocol_json.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/protocol/srs_protocol_kbps.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/protocol/srs_raw_avc.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/protocol/srs_rtmp_amf0.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/protocol/srs_rtmp_handshake.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/protocol/srs_rtmp_io.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/protocol/srs_rtmp_msg_array.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/protocol/srs_rtmp_stack.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/protocol/srs_rtmp_utility.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/protocol/srs_rtsp_stack.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/utest/srs_utest.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/utest/srs_utest_amf0.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/utest/srs_utest_config.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/utest/srs_utest_core.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/utest/srs_utest_kernel.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/utest/srs_utest_protocol.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/utest/srs_utest_reload.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

@@ -391,12 +391,13 @@ int SrsSignalManager::initialize()
     int ret = ERROR_SUCCESS;
     
     /* Create signal pipe */
+    //https://www.geeksforgeeks.org/pipe-system-call/
     if (pipe(sig_pipe) < 0) {
         ret = ERROR_SYSTEM_CREATE_PIPE;
         srs_error("create signal manager pipe failed. ret=%d", ret);
         return ret;
     }
-    
+    //fd = file descriptor
     if ((signal_read_stfd = st_netfd_open(sig_pipe[0])) == NULL) {
         ret = ERROR_SYSTEM_CREATE_PIPE;
         srs_error("create signal manage st pipe failed. ret=%d", ret);
@@ -613,6 +614,10 @@ int SrsServer::initialize(ISrsServerCycle* cycle_handler)
     return ret;
 }
 
+/**
+ * Init statc
+ * @return 
+ */
 int SrsServer::initialize_st()
 {
     int ret = ERROR_SUCCESS;
@@ -737,6 +742,10 @@ int SrsServer::acquire_pid_file()
     return ret;
 }
 
+/**
+ * Open ports for listening request
+ * @return 
+ */
 int SrsServer::listen()
 {
     int ret = ERROR_SUCCESS;
@@ -1074,6 +1083,7 @@ int SrsServer::listen_rtmp()
     int ret = ERROR_SUCCESS;
     
     // stream service port.
+    //multi ports
     std::vector<std::string> ip_ports = _srs_config->get_listens();
     srs_assert((int)ip_ports.size() > 0);
     

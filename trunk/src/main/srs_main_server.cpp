@@ -383,6 +383,7 @@ int run_master()
 {
     int ret = ERROR_SUCCESS;
     
+    //init file descriptor
     if ((ret = _srs_server->initialize_st()) != ERROR_SUCCESS) {
         return ret;
     }
@@ -390,7 +391,7 @@ int run_master()
     if ((ret = _srs_server->initialize_signal()) != ERROR_SUCCESS) {
         return ret;
     }
-    
+    //create and write to pid file
     if ((ret = _srs_server->acquire_pid_file()) != ERROR_SUCCESS) {        
         return ret;
     }

@@ -252,7 +252,7 @@ int SrsTcpListener::listen()
         return ret;
     }
     srs_verbose("listen socket success. ep=%s:%d, fd=%d", ip.c_str(), port, _fd);
-    
+    srs_trace("listen socket success. ep=%s:%d, fd=%d", ip.c_str(), port, _fd);
     if ((_stfd = st_netfd_open_socket(_fd)) == NULL){
         ret = ERROR_ST_OPEN_SOCKET;
         srs_error("st_netfd_open_socket open socket failed. ep=%s:%d, ret=%d", ip.c_str(), port, ret);
